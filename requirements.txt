@@ -1,0 +1,15 @@
+# Mandi-Max | Bharat Bricks Hackathon
+# Install via: %pip install -r requirements.txt inside a Databricks notebook
+# OR add as cluster libraries (PyPI) in the cluster config UI.
+
+# --- Core (pre-installed on Databricks Runtime 12+) ---
+# pyspark        -- pre-installed
+# delta-spark    -- pre-installed on DBR 12+
+# mlflow         -- pre-installed on DBR 11+
+
+# --- Additional dependencies ---
+requests>=2.31.0
+pandas>=1.5.0
+geohash2>=1.1        # Geohash bucketing for OOM-safe spatial joins
+haversine>=2.8.0     # Haversine distance computation in UDFs
+python-dotenv>=1.0.0 # Secrets management (.env file)

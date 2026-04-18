@@ -1,0 +1,25 @@
+command:
+  - streamlit
+  - run
+  - streamlit_app.py
+  - --server.port=8000
+  - --server.address=0.0.0.0
+  - --server.headless=true
+  - --server.enableCORS=false
+  - --server.enableXsrfProtection=false
+
+env:
+  - name: DATABRICKS_SQL_HTTP_PATH
+    value: "/sql/1.0/warehouses/8e4efaaf06a99681"
+
+  - name: DATABRICKS_CATALOG
+    value: "workspace"
+
+  - name: SARVAM_API_KEY
+    value: "YOUR_SARVAM_API_KEY"   # Set via Databricks App Environment tab
+
+resources:
+  - name: sql-warehouse
+    sql_warehouse:
+      id: "8e4efaaf06a99681"
+      permission: "CAN_USE"

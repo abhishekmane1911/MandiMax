@@ -1,0 +1,9 @@
+streamlit>=1.32.0
+databricks-sdk>=0.24.0
+databricks-sql-connector>=3.0.0
+pandas>=2.0.0
+requests>=2.31.0
+flask
+flask-cors
+twilio
+python-dotenv
