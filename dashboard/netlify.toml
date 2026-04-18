@@ -1,0 +1,17 @@
+[build]
+  command   = "npm run build"
+  publish   = "build"
+  functions = "netlify/functions"
+
+# ── All /api/* calls → serverless proxy function (adds Bearer token) ──────────
+[[redirects]]
+  from  = "/api/*"
+  to    = "/.netlify/functions/api-proxy"
+  status = 200
+  force  = true
+
+# ── React Router — serve index.html for all non-API client routes ─────────────
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 200
